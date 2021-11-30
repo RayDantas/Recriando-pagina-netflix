@@ -1,0 +1,106 @@
+:root{
+    /*definimos como variáveis as cores principais do site para facilitar o manuseio delas */
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*serve para limitar os conteúdos dentro do box*/
+}
+
+/*filme principal*/
+body{
+    background-color: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex; /*vai transformar o container em um flexbox */
+    flex-direction: row; /*por padrao ela ja fica assim*/
+    align-items: center; /*alinhamento vertical*/
+    justify-content: space-between; /*espaço entre as tags do container, no caso o logo e o nav*/
+}
+
+header .logo{
+    margin-left: 5px;
+    color:var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a{
+    color: #AAA;
+    text-decoration: none; /*parar tirar o sublinhado do link*/
+    margin-right: 10px;
+
+}
+
+header nav a:hover{
+    /*esse hover serve para quando passar o mouse em cima mudar a cor*/
+    color: #fff;
+
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background-image: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/capa-peakyblinders.jpg'); /*cria um gradiente na imagem de fundo*/
+    height: 400px;
+    background-size: cover; /*para cobrir todo o container*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*centraliza no meio da coluna pois o flex direction ta column*/
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-bottom: 90px;
+    margin-top: 10px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50); /*rgba red,green,black,alpha (transparência)*/
+    border: none;
+    color: white;
+    padding: 15px 30px; /*espaço interno entre os elementos. quando se coloca apenas um valor, serve para todos os lados, quando se coloca dois valores, o primeiro valor será para cima e para baixo e o segundo para direita e esquerda. se colocarmos quatro valores, serão eles para cima, baixo, direita e esquerda*/
+    margin-right: 15px;
+    margin-bottom: 30px;
+    cursor: pointer; /*muda o cursor ao passar o mouse em cima*/
+    transition: .3s ease all; /*transição entre uma animação e outra*/
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px
+}
+
+.container{ /*alterando todos os containers*/
+    margin-left: 20px;
+}
+.filme-principal .container{ /*alterando apenas o container do filme-principal*/
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+
+}
